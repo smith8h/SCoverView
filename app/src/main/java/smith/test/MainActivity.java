@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         b.scoverview.setTextColor(Color.BLACK);
         b.scoverview.setText("Hi I'm Hussein Smith, I'm the developer of this library!");
         b.scoverview.setTextPadding(12);
-        b.scoverview.serCorners(50);
+        b.scoverview.setCorners(50);
     }
 
     public void message(View view) {

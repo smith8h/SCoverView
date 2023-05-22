@@ -99,7 +99,7 @@ public class SCoverView extends RelativeLayout {
         tv.setPaddingRelative(textPadding, textPadding, textPadding, textPadding);
     }
 
-    public void serCorners(int corners) {
+    public void setCorners(int corners) {
         int corner = dpToPx(corners);
         setBackground(shadeColor(Color.TRANSPARENT, corner));
         setClipToOutline(true);
