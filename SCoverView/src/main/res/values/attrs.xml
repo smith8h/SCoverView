@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <declare-styleable name="SCoverView">
+    
+        <attr name="corners" format="dimension"/>
+        
+        <attr name="image" format="reference" />
+        
+        <attr format="string" name="text"/>
+        <attr format="dimension" name="textSize"/>
+        <attr format="color" name="textShadeColor"/>
+        <attr format="color" name="textColor"/>
+        <attr format="dimension" name="textPadding"/>
+
+    </declare-styleable>
+</resources>

@@ -1,0 +1,28 @@
+import java.io.File
+
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+    repositories {
+        mavenCentral()
+        google()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+buildCache {
+    local {
+        directory = file("$rootDir/build-cache").toPath()
+    }
+}
+
+rootProject.name = "SCoverView"
+include ':app'
+include ':SCoverView'
