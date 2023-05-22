@@ -3,15 +3,6 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        debug {
-            storeFile file('D:\\Android Projects\\ObfuscationDictionary\\Hussein-Smith.jks')
-            storePassword '@smith07729416758'
-            keyAlias 'Hussein Smith'
-            keyPassword '@smith07729416758'
-        }
-    }
-
     namespace 'smith.lib.views.cover'
     
     compileSdk 33
@@ -22,7 +13,6 @@ android {
         targetSdk 33
         versionCode 1
         versionName '1.0'
-        signingConfig signingConfigs.debug
     }
 
     buildTypes {
