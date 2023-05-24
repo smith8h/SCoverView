@@ -11,6 +11,10 @@
         <attr format="color" name="textShadeColor"/>
         <attr format="color" name="textColor"/>
         <attr format="dimension" name="textPadding"/>
+        <attr name="textVisibility" format="enum" >
+            <enum name="gone" value="0"/>
+            <enum name="visible" value="1"/>
+        </attr>
 
     </declare-styleable>
 </resources>

@@ -7,6 +7,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import smith.lib.views.cover.SCoverView;
+import smith.lib.views.cover.Visibility;
 import smith.test.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         b.scoverview.setText("Hi I'm Hussein Smith, I'm the developer of this library!");
         b.scoverview.setTextPadding(12);
         b.scoverview.setCorners(50);
+        b.scoverview.setTextVisibility(Visibility.GONE);
     }
 
     public void message(View view) {

@@ -5,19 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
     <smith.lib.views.cover.SCoverView
         android:id="@+id/scoverview"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_width="166dp"
+        android:layout_height="260dp"
         android:onClick="message"
         app:corners="20dp"
         app:image="@drawable/img"
-        app:text="a simple text displayed on scover view"
+        app:text="One Piece S13E1062"
         app:textColor="@color/white"
+        app:textPadding="20dp"
         app:textShadeColor="@color/black"
-        app:textSize="12sp"
-        app:textPadding="20dp" />
+        app:textSize="10sp"
+        app:textVisibility="visible"
+        tools:ignore="SmallSp" />
 
 </LinearLayout>

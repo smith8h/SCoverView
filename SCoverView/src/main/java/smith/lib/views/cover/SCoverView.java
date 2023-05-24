@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -61,6 +62,12 @@ public class SCoverView extends RelativeLayout {
             tv.setText(attrs.getString(R.styleable.SCoverView_text));
             iv.setImageResource(attrs.getResourceId(R.styleable.SCoverView_image, R.drawable.img));
 
+            Visibility visibility = Visibility.fromId(attrs.getInt(R.styleable.SCoverView_textVisibility, 0));
+            switch (visibility.id) {
+                case 0 -> tv.setVisibility(View.GONE);
+                case 1 -> tv.setVisibility(View.VISIBLE);
+            }
+
             setClipToOutline(true);
             attrs.recycle();
         }
@@ -99,6 +106,13 @@ public class SCoverView extends RelativeLayout {
         tv.setPaddingRelative(textPadding, textPadding, textPadding, textPadding);
     }
 
+    public void setTextVisibility(Visibility visibility) {
+        switch (visibility) {
+            case GONE -> tv.setVisibility(View.GONE);
+            case VISIBLE -> tv.setVisibility(View.VISIBLE);
+        }
+    }
+
     public void setCorners(int corners) {
         int corner = dpToPx(corners);
         setBackground(shadeColor(Color.TRANSPARENT, corner));
@@ -118,5 +132,4 @@ public class SCoverView extends RelativeLayout {
         float density = context.getResources().getDisplayMetrics().density;
         return Math.round(dp * density);
     }
-    
 }
