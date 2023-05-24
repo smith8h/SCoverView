@@ -13,8 +13,10 @@ xml code
         app:textColor="@color/white"
         app:textShadeColor="@color/black"
         app:textSize="12sp"
+        app:textVisibility="visible"
         app:textPadding="20dp" />
 ```
+visible or gone 
 
 java codes
 ```java
@@ -24,7 +26,8 @@ java codes
         b.scoverview.setTextShadeColor(Color.CYAN);
         b.scoverview.setTextColor(Color.BLACK);
         b.scoverview.setText("Hi I'm Hussein Smith, I'm the developer of this library!");
-        b.scoveview.setText(int resource)
+        b.scoverview.setText(int resource);
         b.scoverview.setTextPadding(12);
+        scoverview.setTextVisibility(Visibility.VISIBLE); // GONE
         b.scoverview.setCorners(50);
 ```
