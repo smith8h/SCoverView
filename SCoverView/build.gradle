@@ -1,6 +1,10 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
+
+def artifactId = "SCoverView"
+def groupId = "smith.lib"
 
 android {
     namespace 'smith.lib.views.cover'
@@ -35,4 +39,17 @@ android {
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
+}
+
+project.afterEvaluate {
+    publishing {
+        publications {
+            library(MavenPublication) {
+                setGroupId groupId
+                setArtifactId artifactId
+                version android.defaultConfig.versionName
+                artifact bundleReleaseAar
+            }
+        }
+    }
 }

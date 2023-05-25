@@ -20,7 +20,6 @@ import androidx.annotation.StringRes;
 public class SCoverView extends RelativeLayout {
 
     private Context context;
-
     private TextView tv;
     private ImageView iv;
     
